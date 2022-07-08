@@ -19,7 +19,9 @@ import os, screeninfo
 
 def screen_init():
     return Screen(
-        top=custom_bar()
+        # top=custom_bar()
+        wallpaper="~/.config/qtile/wallpapers/mob_city.png"
+        wallpaper_mdode="fill"
     )
 
 screens = [screen_init() for screen in screeninfo.get_monitors()]

@@ -3,15 +3,16 @@ from modules.groups import groups
 from modules.layouts import layouts, floating_layout
 from modules.mouse import mouse
 from modules.hooks import *
-from modules.wallpapers import * 
+from modules.wallpapers import *
 from modules.screens import screens
 
-import os
 
 mod = "mod4"
 terminal = "alacritty"
 # keys = []
 
+# import module
+ 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 main = None  # WARNING: this is deprecated and will be removed soon
@@ -21,8 +22,6 @@ cursor_warp = False
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 wmname = "Qtile"
-widget_defaults = dict(
-        font='Cascadia Code',
-        fontsize=13,
-        padding=3
+widget_defaults=dict(
+    
 )

@@ -9,7 +9,7 @@ keys.extend(
         Key([mod, "shift"], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
         Key([mod], "r", lazy.spawn("rofi -show combi"), desc="Spawn quick search bar"),
 
-        Key([mod, "control"], "r", lazy.restart(), desc="Resatart Qtile")
+        Key([mod, "control"], "r", lazy.restart(), desc="Resatart Qtile"),
 
          # Sound Keys
         Key([], "XF86AudioRaiseVolume",lazy.spawn("amixer set Master 3%+")),

@@ -3,6 +3,6 @@ from modules.keys import terminal
 
 custom_bar = bar.Bar(
     [
-        
+               
     ]
 )
