@@ -1,7 +1,7 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 
-from modules.keys import keys, mod
+from modules.keys import keys, mod, alt
 
 keys.extend(
     [
@@ -11,32 +11,39 @@ keys.extend(
         Key([mod], "Down", lazy.layout.down()),
         Key([mod], "Right", lazy.layout.right()),
 
-        Key([mod], "Tab", lazy.layout.next()),
+        Key([alt], "Tab", lazy.layout.next()),
 
         # Move windows
         Key([mod, "shift"], "Left", lazy.layout.shuffle_left()),
         Key([mod, "shift"], "Up", lazy.layout.shuffle_up()), 
         Key([mod, "shift"], "Down", lazy.layout.shuffle_down()), 
         Key([mod, "shift"], "Right", lazy.layout.shuffle_right()),
+
+        Key([mod], "l", lazy.next_layout(), desc="Switch to next layout")
     ]
 )
 
 from libqtile import layout
 
+default_config = {
+    "margin": 8,
+    "border_focus":'#5294e2',
+    "border_normal": '#2c5380'
+}
+
 # Different layouts
 layouts = [
-    layout.MonadTall(margin=8, border_focus='#5294e2',
-                     border_normal='#2c5380'),
+    layout.MonadTall(**default_config),
     #layout.Columns(border_focus_stack='#d75f5f'),
-    layout.Max(),
+    layout.Max(**default_config),
     # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadTall(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
+    # layout.Stack(**default_config, num_stacks=2),
+    layout.Bsp(**default_config),
+    layout.Matrix(**default_config),
+    layout.MonadTall(**default_config),
+    layout.MonadWide(**default_config),
+    layout.RatioTile(**default_config),
+    layout.Tile(**default_config),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),

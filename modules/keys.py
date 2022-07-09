@@ -5,9 +5,17 @@ keys = []
 mod, alt = "mod4", "mod1"
 terminal = "alacritty"
 
+from libqtile import qtile as qt
+import os
+
+@lazy.function
+def shutdown(qtile):
+    qt.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh')
+
 keys.extend(
     [   
-        Key([mod], "enter", lazy.spawn(terminal), desc="Spawn a terminal window"),
+        Key([mod], "s", shutdown, desc="Open a shutdown panel"),
+        Key([mod], "Return", lazy.spawn(terminal), desc="Spawn a terminal window"),
         Key([mod, "shift"], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
         Key([mod], "r", lazy.spawn("rofi -show combi"), desc="Spawn quick search bar"),
         Key([mod], "b", lazy.spawn("firefox"), desc="Spawn browser"),

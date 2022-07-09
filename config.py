@@ -1,16 +1,5 @@
 ### Main Config File ###
 
-# from modules import(
-#     keys, 
-#     groups,
-#     layouts,
-#     floating_layout,
-#     screens,
-#     mouse,
-#     hooks,
-#     widget_defaults,
-# )
-
 from modules.keys import keys
 from modules.groups import groups
 # from modules.hooks import * 
