@@ -1,5 +1,5 @@
 from libqtile import bar
-from modules.keys import terminal
+from modules.general import keys, mod, terminal
 
 custom_bar = bar.Bar(
     [

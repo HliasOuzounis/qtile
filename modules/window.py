@@ -1,7 +1,7 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 
-from config import keys, mod
+from modules.general import keys, mod
 
 keys.extend(
     [        
