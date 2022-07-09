@@ -1,14 +1,22 @@
 ### Main Config File ###
 
-from modules import(
-    keys, 
-    groups,
-    layouts,
-    floating_layout,
-    screens,
-    mouse,
-    hooks
-)
+# from modules import(
+#     keys, 
+#     groups,
+#     layouts,
+#     floating_layout,
+#     screens,
+#     mouse,
+#     hooks,
+#     widget_defaults,
+# )
+
+from modules.keys import keys
+from modules.groups import groups
+# from modules.hooks import * 
+from modules.layouts import layouts, floating_layout
+from modules.mouse import mouse
+from modules.screens import screens
 
 auto_fullscreen = True
 auto_minimize = True
@@ -21,9 +29,3 @@ focus_on_window_activation = 'smart'
 reconfigure_screens = True
 wl_input_rules = None
 wmname = 'qtile'
-
-widget_defaults = dict(
-    font = 'SourceCodePro Medium',
-    fontsize = 10,
-    padding = None,
-)

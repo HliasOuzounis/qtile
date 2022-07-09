@@ -1,7 +1,7 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 
-from modules.general import keys, mod
+from modules.keys import keys, mod
 
 keys.extend(
     [        
@@ -17,11 +17,9 @@ from libqtile.config import Screen
 
 import os, screeninfo
 
-def screen_init():
-    return Screen(
-        # top=custom_bar()
-        wallpaper="~/.config/qtile/wallpapers/mob_city.png"
-        wallpaper_mdode="fill"
-    )
+config = {
+  'wallpaper': '~/.config/qtile/wallpapers/mob_city.png',
+  'wallpaper_mode': 'fill',
+}
 
-screens = [screen_init() for screen in screeninfo.get_monitors()]
+screens = [Screen(**config) for screen in screeninfo.get_monitors()]

@@ -1,7 +1,7 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 
-from modules.general import keys, mod
+from modules.keys import keys, mod
 
 keys.extend(
     [
@@ -11,7 +11,7 @@ keys.extend(
         Key([mod], "Down", lazy.layout.down()),
         Key([mod], "Right", lazy.layout.right()),
 
-        Key([mod], "Tab", lazy.layout.next())
+        Key([mod], "Tab", lazy.layout.next()),
 
         # Move windows
         Key([mod, "shift"], "Left", lazy.layout.shuffle_left()),
