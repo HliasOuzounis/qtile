@@ -23,7 +23,14 @@ nord_fox = {
         'fg': "#b9bfca",
         'low_bg': "#2e3440",
         'low_fg': "#b9bfca",      
-    } 
+    },
+    "group_box": {
+        "bg": "#343a40",
+        "fg": "#7209b7",
+        "active": "#c77dff",
+        "focused": "#ade8f4",
+        "inactive": "#6c757d",
+    }
 }
 
 

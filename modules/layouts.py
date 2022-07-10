@@ -26,7 +26,8 @@ keys.extend(
 from libqtile import layout
 
 default_config = {
-    "margin": 15,
+    "margin": 10,
+    "border_width": 4,
     "border_focus":'#5294e2',
     "border_normal": '#2c5380'
 }

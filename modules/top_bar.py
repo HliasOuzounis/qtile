@@ -164,12 +164,14 @@ time = [widget.Clock, {
         ]
 
 from .widgets.battery import my_battery
+from .widgets.groupbox import my_group_box
 
 def widgetlist():
     return [
         spacer_small,
         logo,
-        groupbox,
+        # groupbox,
+        my_group_box,
         windowname,
         systray,
         # cpu,

@@ -42,7 +42,7 @@ firacode_large = {
 source_pro = {
     "font": "Source Code Pro",
     "fontsize": 14,
-    "padding": 2
+    "padding": 0
 }
 # font sets
 all_victormono = {
