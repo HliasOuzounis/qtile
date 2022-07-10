@@ -13,7 +13,7 @@ keys.extend(
 
 # Configure Screens
 from libqtile.config import Screen
-# from .top_bar import custom_bar
+from .top_bar import my_bar
 
 import os, screeninfo
 
@@ -21,7 +21,5 @@ config = {
   'wallpaper': '~/.config/qtile/wallpapers/mob_city.png',
   'wallpaper_mode': 'fill',
 }
-screens = [Screen(**config) for screen in screeninfo.get_monitors()]
-
-# top_bar = cursor_bar
-# screens = [Screen(**config, top=top_bar) for screen in screeninfo.get_monitors()]
+# screens = [Screen(**config) for screen in screeninfo.get_monitors()]
+screens = [Screen(**config, top=my_bar()) for screen in screeninfo.get_monitors()]

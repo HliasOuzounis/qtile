@@ -5,12 +5,13 @@ keys = []
 mod, alt = "mod4", "mod1"
 terminal = "alacritty"
 
+from libqtile.command import lazy as lz
 from libqtile import qtile as qt
 import os
 
-@lazy.function
-def shutdown(qtile):
-    qt.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh')
+@lz.function
+def shutdown(qtile): 
+    qt.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
 
 keys.extend(
     [   
@@ -27,6 +28,10 @@ keys.extend(
         Key([], "XF86AudioRaiseVolume",lazy.spawn("amixer set Master 3%+")),
         Key([], "XF86AudioLowerVolume",lazy.spawn("amixer set Master 3%-")),
         Key([], "XF86AudioMute",lazy.spawn("amixer set Master toggle")),
+
+        #Brightness
+        # Key([], "XF86MonBrightnessUp", lazy.spawn("sh " + os.path.expanduser("~/.scripts/backlight/increase.sh")), desc="Increase brightness"),
+        # Key([], "XF86MonBrightnessDown", lazy.spawn("sh " + os.path.expanduser("~/.scripts/backlight/decrease.sh")), desc="Decrease brightness"),
 
         ## Window shortcuts ##
         Key([mod], "w", lazy.window.kill()),

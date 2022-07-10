@@ -26,7 +26,7 @@ keys.extend(
 from libqtile import layout
 
 default_config = {
-    "margin": 8,
+    "margin": 15,
     "border_focus":'#5294e2',
     "border_normal": '#2c5380'
 }
@@ -38,10 +38,6 @@ layouts = [
     layout.Max(**default_config),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(**default_config, num_stacks=2),
-    layout.Bsp(**default_config),
-    layout.Matrix(**default_config),
-    layout.MonadTall(**default_config),
-    layout.MonadWide(**default_config),
     layout.RatioTile(**default_config),
     layout.Tile(**default_config),
     # layout.TreeTab(),
