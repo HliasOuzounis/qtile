@@ -35,25 +35,23 @@ class MyBattery(widget.Battery):
         icons = [
             '', '', '', '', '', ''
         ]
-        if percent <= 20: return icons[0]
-        if percent <= 30: return icons[1]
-        if percent <= 40: return icons[2]
-        if percent <= 60: return icons[3]
-        if percent <= 80: return icons[4]
-        if percent <= 90: return icons[5]
-        return '' # unkown
+        if percent <= 0.20: return icons[0]
+        if percent <= 0.30: return icons[1]
+        if percent <= 0.40: return icons[2]
+        if percent <= 0.60: return icons[3]
+        if percent <= 0.80: return icons[4]
+        return icons[5]
     
     def discharging(self, percent):
         icons = [
             '', '', '', '', '', ''
         ]
-        if percent <= 20: return icons[0]
-        if percent <= 30: return icons[1]
-        if percent <= 40: return icons[2]
-        if percent <= 60: return icons[3]
-        if percent <= 80: return icons[4]
-        if percent <= 90: return icons[5]
-        return '' # unkown
+        if percent <= 0.20: return icons[0]
+        if percent <= 0.30: return icons[1]
+        if percent <= 0.40: return icons[2]
+        if percent <= 0.60: return icons[3]
+        if percent <= 0.80: return icons[4]
+        return icons[5]
 
 
 my_battery = [MyBattery, {
