@@ -18,7 +18,14 @@ nord_fox = {
     'white': "#e5e9f0",
     'orange': "#c9826b",
     'pink': "#bf88bc",
+    "battery": {
+        'bg': "#2e3440",
+        'fg': "#b9bfca",
+        'low_bg': "#2e3440",
+        'low_fg': "#b9bfca",      
+    } 
 }
+
 
 rose_pine = {
     "bg": "#1f1d2e",
@@ -37,4 +44,4 @@ rose_pine = {
 }
 
 # selected colorscheme
-colors = nord_fox
+colours = nord_fox

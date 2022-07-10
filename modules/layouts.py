@@ -14,10 +14,10 @@ keys.extend(
         Key([alt], "Tab", lazy.layout.next()),
 
         # Move windows
-        Key([mod, "shift"], "Left", lazy.layout.shuffle_left()),
-        Key([mod, "shift"], "Up", lazy.layout.shuffle_up()), 
-        Key([mod, "shift"], "Down", lazy.layout.shuffle_down()), 
-        Key([mod, "shift"], "Right", lazy.layout.shuffle_right()),
+        Key([mod, "control"], "Left", lazy.layout.shuffle_left()),
+        Key([mod, "control"], "Up", lazy.layout.shuffle_up()), 
+        Key([mod, "control"], "Down", lazy.layout.shuffle_down()), 
+        Key([mod, "control"], "Right", lazy.layout.shuffle_right()),
 
         Key([mod], "l", lazy.next_layout(), desc="Switch to next layout")
     ]

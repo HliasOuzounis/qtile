@@ -1,7 +1,7 @@
 from libqtile import qtile, widget, bar
 from libqtile.lazy import lazy
 from themes.fonts import font
-from themes.colours import colors
+from themes.colours import colours
 import os
 
 CENTER_SPACERS = 100
@@ -9,14 +9,8 @@ MARGIN = 0
 BORDER_WIDTH = 3
 windowname = "Source Code Pro"
 
-fontinfo = dict(
-    font=font["secondary"]["family"],
-    padding=font["secondary"]["padding"],
-    fontsize=font["secondary"]["fontsize"]
-)
-
-DEFAULT_FG = colors["fg"]
-DEFAULT_BG = colors["bg"]
+DEFAULT_FG = colours["fg"]
+DEFAULT_BG = colours["bg"]
 WIDTH=34
 
 def launcher(qtile):
@@ -24,24 +18,24 @@ def launcher(qtile):
     
 
 groupbox = [widget.GroupBox, {
-                "font" : font["clear"]["family"],
-                "padding" : font["clear"]["padding"],
-                "fontsize" : font["clear"]["fontsize"],
-                "foreground": colors["cyan"],
+                "font" : font["font"],
+                "padding" : font["padding"],
+                "fontsize" : font["fontsize"],
+                "foreground": colours["cyan"],
                 "highlight_method": "text",
-                "block_highlight_text_color": colors["white"],
-                "active": colors["fg"],
-                "inactive": colors["cyan"],
+                "block_highlight_text_color": colours["white"],
+                "active": colours["fg"],
+                "inactive": colours["cyan"],
                 "rounded": False,
-                "highlight_color": [colors["fg"], colors["yellow"]],
+                "highlight_color": [colours["fg"], colours["yellow"]],
                 "urgent_alert_method": "line",
-                "urgent_text": colors["red"],
-                "urgent_border": colors["red"],
+                "urgent_text": colours["red"],
+                "urgent_border": colours["red"],
                 "disable_drag": True,
                 "use_mouse_wheel": False,
                 "hide_unused": False,
                 "spacing": 5,
-                "this_current_screen_border": colors["yellow"],
+                "this_current_screen_border": colours["yellow"],
             }
         ]
 
@@ -50,14 +44,14 @@ windowname = [widget.WindowName, {
                 "fontsize": 16,
                 "padding": 3,
                 "format": '{name}',
-                "background": colors["fg_gutter"],
+                "background": colours["fg_gutter"],
                 "center_aligned": True
             }
         ]
 
 systray = [widget.Systray, {
-        "background": colors["orange"],
-        "foreground": colors["black"],
+        "background": colours["orange"],
+        "foreground": colours["black"],
         "theme_path": "rose-pine-gtk",
         }
     ]
@@ -72,7 +66,7 @@ spacer_small = [ widget.Spacer, {
 ]
 
 logo_image = [ widget.Image, {
-        "background": colors["magenta"],
+        "background": colours["magenta"],
         "margin" : 3,
         "filename" : "~/.config/qtile/icon/artixlinux-logo-flat.png",
         "mouse_callbacks":{
@@ -83,13 +77,13 @@ logo_image = [ widget.Image, {
 
 logo = [widget.TextBox, {
                 # text="  ",
-                "font" : font["clear"]["family"],
+                "font" : font["font"],
                 "padding" : -2,
-                "fontsize" : font["clear"]["fontsize"]*1.6,
+                "fontsize" : font["fontsize"]*1.6,
                 "text": " ",
                 #"text": " Σ",
-                "background": colors["magenta"],
-                "foreground": colors["bg"],
+                "background": colours["magenta"],
+                "foreground": colours["bg"],
                 "mouse_callbacks":{
                     "Button1": lazy.spawn("sh " + os.path.expanduser("~/.scripts/rofi-launchpad.sh")) 
                 },
@@ -97,17 +91,17 @@ logo = [widget.TextBox, {
         ]
 
 cpu = [widget.CPU, {
-                **fontinfo,
+                **font,
                 "format": " {freq_current}GHz {load_percent}%",
-                "background": colors["yellow"],
-                "foreground": colors["bg"]
+                "background": colours["yellow"],
+                "foreground": colours["bg"]
             }
         ]
 
 disk = [widget.DF, {
-                **fontinfo,
+                **font,
                 "partition": "/",
-                "warn_color": colors["red"],
+                "warn_color": colours["red"],
                 "warn_space":40,
                 "visible_on_warn": False,
                 "measure":"G",
@@ -116,16 +110,16 @@ disk = [widget.DF, {
         ]
 
 net = [widget.Net, {
-                **fontinfo,
+                **font,
                 "format": "\u2193 {down} \u2191 {up}",
                 "interface": "wlp0s20f3",
                 "update_interval": 3,
-                "background": colors["pink"]
+                "background": colours["pink"]
             }
         ]
 
 mem = [widget.Memory, {
-                **fontinfo,
+                **font,
                 "format": ": {MemUsed:.2f}/{MemTotal:.2f}{mm}",
                 "update_interval": 1.0,
                 "measure_mem": "G",
@@ -133,10 +127,10 @@ mem = [widget.Memory, {
         ]
 
 batt = [widget.Battery, {
-                **fontinfo,
-                "background": colors["magenta"],
-                "foreground": colors["bg"],
-                "low_foreground": colors["red"],
+                **font,
+                "background": colours["magenta"],
+                "foreground": colours["bg"],
+                "low_foreground": colours["red"],
                 "low_background": None,
                 "low_percentage": 0.30,
                 "charge_char": "",
@@ -150,24 +144,26 @@ batt = [widget.Battery, {
         ]
 
 layout = [widget.CurrentLayout, {
-                **fontinfo,
-                "background": colors["pink"]
+                **font,
+                "background": colours["pink"]
             }
         ]
 
 date = [widget.Clock, {
-                **fontinfo,
+                **font,
                 "format": '%m/%d/%Y',
-                "background": colors["orange"]
+                "background": colours["orange"]
             }
         ]
 
 time = [widget.Clock, {
-                **fontinfo,
+                **font,
                 "format": '%I:%M %p ',
-                "background": colors["fg_gutter"]
+                "background": colours["fg_gutter"]
             }
         ]
+
+from .widgets.battery import my_battery
 
 def widgetlist():
     return [
@@ -178,6 +174,7 @@ def widgetlist():
         systray,
         # cpu,
         batt,
+        my_battery,
 #        disk,
 #        net,
         # mem,
@@ -218,6 +215,7 @@ def style(widgetlist):
 def my_bar():
     return bar.Bar(
         [
+            # *widgetlist()
             *style(widgetlist())
         ],
         WIDTH,

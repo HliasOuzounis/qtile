@@ -39,10 +39,10 @@ keys.extend(
         Key([mod, "shift"], "f", lazy.window.toggle_fullscreen()),
 
         # Grow Window Size
-        Key([mod, "control"], "Left", lazy.layout.grow_left()),
-        Key([mod, "control"], "Up", lazy.layout.grow_up()), 
-        Key([mod, "control"], "Down", lazy.layout.grow_down()), 
-        Key([mod, "control"], "Right", lazy.layout.grow_right()),
+        # Key([mod, "shift"], "Left", lazy.layout.grow_left()),
+        # Key([mod, "shift"], "Up", lazy.layout.grow_up()), 
+        # Key([mod, "shift"], "Down", lazy.layout.grow_down()), 
+        # Key([mod, "shift"], "Right", lazy.layout.grow_right()),
 
         # Reset
         Key([mod], "n", lazy.layout.normalize())

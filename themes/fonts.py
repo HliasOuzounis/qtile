@@ -3,44 +3,44 @@ file containing a selection of possible sets of fonts
 """
 # singular fonts
 victormono = {
-    "family": "VictorMono Nerd Font Semibold",
+    "font": "VictorMono Nerd Font Semibold",
     "fontsize": 16,
     "padding": 3
 }
 
 comiccode = {
-    "family": "Comic Code",
+    "font": "Comic Code",
     "fontsize": 14,
     "padding": 0,
 }
 
 comiccode_large = {
-    "family": "Comic Code",
+    "font": "Comic Code",
     "fontsize": 16,
     "padding": 0,
 }
 
 cozette = {
-    "family": "CozetteVector",
+    "font": "CozetteVector",
     "fontsize": 24,
     "padding": 0
 }
 
 firacode = {
-    "family": "FiraCode Nerd Font Mono",
+    "font": "FiraCode Nerd Font Mono",
     "fontsize": 14,
     "padding": 3
 }
 
 
 firacode_large = {
-    "family": "FiraCode Nerd Font Mono",
+    "font": "FiraCode Nerd Font Mono",
     "fontsize": 22,
     "padding": 3
 }
 
 source_pro = {
-    "family": "Source Code Pro",
+    "font": "Source Code Pro",
     "fontsize": 14,
     "padding": 2
 }
@@ -69,4 +69,4 @@ all_source_pro = {
     "secondary": source_pro,
 }
 # selected font set
-font = all_comiccode
+font = source_pro
