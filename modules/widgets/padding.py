@@ -31,7 +31,10 @@ def sep(padding):
         linewidth=0,
         background=bg
     )
-    
+
+def spacer():
+    return widget.Spacer()
+
 def in_line_sep(padding, new_bg):
     return widget.Sep(
         padding=padding,
@@ -52,6 +55,6 @@ def right_side_padding(padding):
 def full_padding(padding):
     return [
         right_pad(),
-        sep(padding),
+        spacer(),
         left_pad()
     ]
