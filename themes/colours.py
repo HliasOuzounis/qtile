@@ -5,7 +5,7 @@ Dicts of all the color schemes I like to use
 
 # example colorscheme
 nord_fox = {
-    'bg': "#2e3440",
+    'bg': "#212529",
     'fg': "#b9bfca",
     'fg_gutter': "#4b5668",
     'black': "#3b4252",
@@ -21,15 +21,32 @@ nord_fox = {
     "battery": {
         'bg': "#2e3440",
         'fg': "#b9bfca",
-        'low_bg': "#2e3440",
-        'low_fg': "#b9bfca",      
+        'low_bg': "#212529",
+        'low_fg': "#e5383b",      
     },
     "group_box": {
-        "bg": "#343a40",
+        "bg": "#141a20",
         "fg": "#7209b7",
         "active": "#c77dff",
         "focused": "#ade8f4",
+        "other_screen_focused": "#0077b6",
         "inactive": "#6c757d",
+    },
+    "window_name": {
+        "bg": "343a40",
+        "fg": "#ffffff",
+    },
+    "volume": {
+        "bg": "343a40",
+        "fg": "#ffffff",
+    }, 
+    "systray": {
+        "bg": "343a40",
+        "fg": "#ffffff",
+    },
+    "current_screen": {
+        "active": "#ade8f4",
+        "inactive": "#9d4edd",
     }
 }
 

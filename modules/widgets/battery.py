@@ -1,10 +1,11 @@
-from libqtile import qtile, widget
+from libqtile import widget
 
 from themes.colours import colours
 from themes.fonts import font
 from libqtile.widget.battery import BatteryState
 
 colorscheme = colours["battery"]
+bg = colours["bg"]
 
 from libqtile.log_utils import logger
 
@@ -54,16 +55,17 @@ class MyBattery(widget.Battery):
         return icons[5]
 
 
-my_battery = [MyBattery, {
-        **font,
-        "background": colorscheme["bg"],
-        "foreground": colorscheme["fg"],
-        "notify_below": 0.2,
-        "low_percentage": 0.2,
-        "low_background": colorscheme["low_bg"],
-        "low_foreground": colorscheme["low_fg"],
-        "update_interval": 30,
-        "format": " {char} {percent:2.0%}",
-        "show_short_text": False,
-    }
-]
+def my_battery():
+    return MyBattery(
+        font = font["font"],
+        fontsize = font["fontsize"] + 5,
+        background= bg,
+        foreground= colorscheme["fg"],
+        notify_below= 0.2,
+        low_percentage= 0.2,
+        low_background= colorscheme["low_bg"],
+        low_foreground= colorscheme["low_fg"],
+        update_interval= 1,
+        format= " {char} {percent:2.0%}",
+        show_short_text= False,
+    )

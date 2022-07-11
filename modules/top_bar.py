@@ -165,6 +165,8 @@ time = [widget.Clock, {
 
 from .widgets.battery import my_battery
 from .widgets.groupbox import my_group_box
+from .widgets.windowname import my_window_name
+from .widgets.volume import my_volume, my_volume_text
 
 def widgetlist():
     return [
@@ -172,10 +174,12 @@ def widgetlist():
         logo,
         # groupbox,
         my_group_box,
-        windowname,
+        # windowname,
+        my_window_name,
         systray,
         # cpu,
-        batt,
+        my_volume,
+        my_volume_text,
         my_battery,
 #        disk,
 #        net,
@@ -220,9 +224,9 @@ def my_bar():
             # *widgetlist()
             *style(widgetlist())
         ],
-        WIDTH,
+        50,
         foreground=DEFAULT_FG,
-        background=DEFAULT_BG,
+        background="#3b425200",
         opacity=1.0,
-        margin=[MARGIN, MARGIN, BORDER_WIDTH, MARGIN],
-    )
+        margin=[10, 10, 10, 10],
+)
