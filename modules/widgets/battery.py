@@ -53,6 +53,11 @@ class MyBattery(widget.Battery):
         if percent <= 0.60: return icons[3]
         if percent <= 0.80: return icons[4]
         return icons[5]
+    
+    def mouse_enter(self, *args, **kwargs):
+        self.format = " {char} {percent:2.0%} {hour}:{min:02d}"
+    def mouse_leave(self, *args, **kwargs):
+        self.format = " {char} {percent:2.0%}"
 
 
 def my_battery():
