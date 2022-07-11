@@ -9,7 +9,8 @@ from modules.keys import keys, mod
 
 import subprocess
 
-bg = colours["bg"]
+bg = colours["widget_bg"]
+fg = colours["widget_fg"]
 
 def get_keyboard_layout():
     keyboard_code = subprocess.run(
@@ -24,7 +25,7 @@ def get_keyboard_layout():
 def my_keyboard():
     return widget.GenPollText(
         background=bg,
-        foreground="#ffffff", 
+        foreground=fg,
         fontsize=font["fontsize"] + 5, 
         func=get_keyboard_layout, 
         update_interval=0.1

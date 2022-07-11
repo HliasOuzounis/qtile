@@ -24,12 +24,16 @@ keys.extend(
 )
 
 from libqtile import layout
+from themes.colours import colours
+
+border_focus = colours["layout"]["border_focus"]
+border_normal = colours["layout"]["border_normal"]
 
 default_config = {
     "margin": 10,
-    "border_width": 4,
-    "border_focus":'#5294e2',
-    "border_normal": '#2c5380'
+    "border_width": 1,
+    "border_focus": border_focus,
+    "border_normal": border_normal
 }
 
 # Different layouts

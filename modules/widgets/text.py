@@ -3,8 +3,8 @@ from libqtile import qtile, widget
 from themes.colours import colours
 from themes.fonts import font
 
-bg = colours["bg"]
-fg = colours["volume"]["fg"]
+bg = colours["widget_bg"]
+fg = colours["widget_fg"]
 
 def my_text(text):
     return widget.TextBox(

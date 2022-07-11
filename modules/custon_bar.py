@@ -3,7 +3,8 @@ from libqtile.lazy import lazy
 from themes.fonts import font
 from themes.colours import colours
 
-bg = colours["bg"]
+bg = colours["bar_bg"]
+widget_bg = colours["widget_bg"]
 
 from .widgets.battery import my_battery
 from .widgets.groupbox import my_group_box
@@ -28,9 +29,9 @@ def get_widget_list():
         my_group_box(),
         *full_padding(padding),
         my_keyboard(),
-        in_line_sep(padding, "#212529"),
+        in_line_sep(padding, widget_bg),
         my_battery(),
-        in_line_sep(padding, "#212529"),
+        in_line_sep(padding, widget_bg),
         my_text("墳 "),
         my_volume(),
         *right_side_padding(padding)
@@ -50,9 +51,9 @@ def get_widget_list_primary():
         my_systray(),
         *full_padding(padding),
         my_keyboard(),
-        in_line_sep(padding, "#212529"),
+        in_line_sep(padding, widget_bg),
         my_battery(),
-        in_line_sep(padding, "#212529"),
+        in_line_sep(padding, widget_bg),
         my_text("墳 "),
         my_volume(),
         *right_side_padding(padding)
@@ -65,11 +66,15 @@ def my_bar(is_primary):
         42,
         opacity=1.0,
         margin=[10, 10, 10, 10],
-        background = "#000000"
+        background=bg,
+        border_color=bg,
+        border_width=[5, 5, 5, 5]
     ) if is_primary else bar.Bar(
         get_widget_list(), 
         42,
         opacity=1.0,
         margin=[10, 10, 10, 10],
-        background = "#000000"
+        background=bg,
+        border_color=bg,
+        border_width=[5, 5, 5, 5]
     )

@@ -3,8 +3,8 @@ from libqtile import widget
 from themes.colours import colours
 from themes.fonts import font
 
-bg = "#00000000"
-fg = colours["bg"]
+bg = colours["bar_bg"]
+fg = colours["widget_bg"]
 
 def left_pad():
     return widget.TextBox(

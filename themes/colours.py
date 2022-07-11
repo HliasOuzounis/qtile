@@ -67,5 +67,21 @@ rose_pine = {
     "pink": "#2a2837"
 }
 
+mob = {
+    "bar_bg": "#393E46",
+    "widget_bg": "#232931",
+    "widget_fg": "#EEEEEE",
+    "focused": "#74DEED",
+    "active": "#C62A88",
+    "inactive": "#333F44",
+    "battery": {
+        "low_fg": "#ED6363"
+    },
+    "layout": {
+        "border_focus": "#74DEED",
+        "border_normal": "#393E46"
+    }
+}
+
 # selected colorscheme
-colours = nord_fox
+colours = mob
