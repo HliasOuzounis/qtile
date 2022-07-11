@@ -9,7 +9,7 @@ fg = colours["widget_fg"]
 def my_volume():
     return widget.Volume(
         font = font["font"],
-        fontsize = font["fontsize"] + 5,
+        fontsize = font["fontsize"],
         background = bg,
         foreground = fg,
         mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("pavucontrol")}

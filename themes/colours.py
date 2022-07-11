@@ -68,8 +68,8 @@ rose_pine = {
 }
 
 mob = {
-    "bar_bg": "#393E46",
-    "widget_bg": "#232931",
+    "bar_bg": "#212529",
+    "widget_bg": "#131515",
     "widget_fg": "#EEEEEE",
     "focused": "#74DEED",
     "active": "#C62A88",
@@ -79,8 +79,9 @@ mob = {
     },
     "layout": {
         "border_focus": "#74DEED",
-        "border_normal": "#393E46"
-    }
+        "border_normal": "#bf4342"
+    },
+    "power_button": "#f48498",
 }
 
 # selected colorscheme

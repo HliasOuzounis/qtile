@@ -19,7 +19,7 @@ def my_group_box():
             highlight_method = "text", # Method of highlighting ('border', 'block', 'text', or 'line')
             rounded = True,
             font = font["font"],
-            fontsize = font["fontsize"] + 5,
+            fontsize = font["fontsize"],
     )
 
     

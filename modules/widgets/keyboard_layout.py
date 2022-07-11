@@ -26,7 +26,7 @@ def my_keyboard():
     return widget.GenPollText(
         background=bg,
         foreground=fg,
-        fontsize=font["fontsize"] + 5, 
+        fontsize=font["fontsize"], 
         func=get_keyboard_layout, 
         update_interval=0.1
         )

@@ -64,14 +64,14 @@ class MyBattery(widget.Battery):
 def my_battery():
     return MyBattery(
         font = font["font"],
-        fontsize = font["fontsize"] + 5,
+        fontsize = font["fontsize"],
         background= bg,
         foreground= fg,
         notify_below= 0.2,
         low_percentage= 0.2,
         low_background= bg,
         low_foreground= low_fg,
-        update_interval= 1,
+        update_interval= 0.5,
         format= " {char} {percent:2.0%}",
         show_short_text= False,
     )

@@ -11,7 +11,7 @@ inactive = colours["active"]
 def my_current_screen():
     return widget.CurrentScreen(
         font=font["font"],
-        fontsize=font["fontsize"] + 10,
+        fontsize=font["fontsize"] + 5,
         active_text="",
         inactive_text="",
         background=bg,

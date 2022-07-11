@@ -31,6 +31,7 @@ def sep(padding):
         linewidth=0,
         background=bg
     )
+    
 def in_line_sep(padding, new_bg):
     return widget.Sep(
         padding=padding,

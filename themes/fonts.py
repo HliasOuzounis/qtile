@@ -7,7 +7,7 @@ victormono = {
 
 source_pro = {
     "font": "Source Code Pro",
-    "fontsize": 12,
+    "fontsize": 16,
     "padding": 0
 }
 source_pro_italic = {

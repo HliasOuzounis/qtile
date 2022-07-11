@@ -30,7 +30,7 @@ border_focus = colours["layout"]["border_focus"]
 border_normal = colours["layout"]["border_normal"]
 
 default_config = {
-    "margin": 10,
+    "margin": 12,
     "border_width": 1,
     "border_focus": border_focus,
     "border_normal": border_normal
