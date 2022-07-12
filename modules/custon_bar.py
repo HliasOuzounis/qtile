@@ -47,16 +47,9 @@ def get_widget_list_primary():
     return widgets
 
 def my_bar(is_primary):
+    widgets = get_widget_list_primary() if is_primary else get_widget_list()
     return bar.Bar(
-        get_widget_list_primary(), 
-        42,
-        opacity=1.0,
-        margin=[10, 10, 5, 10],
-        background=bg,
-        border_color=bg,
-        border_width=[5, 5, 5, 5]
-    ) if is_primary else bar.Bar(
-        get_widget_list(), 
+        widgets, 
         42,
         opacity=1.0,
         margin=[10, 10, 5, 10],

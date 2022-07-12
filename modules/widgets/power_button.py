@@ -8,6 +8,9 @@ from modules.keys import shutdown
 bg = colours["widget_bg"]
 fg = colours["power_button"]
 
+from libqtile.command import lazy
+import os
+
 def my_power_button():
     return widget.TextBox(
         text="",
@@ -16,5 +19,5 @@ def my_power_button():
         padding=0,
         background=bg,
         foreground=fg,
-        mouse_callbakcs={"Button1": shutdown}
+        mouse_callbakcs={"Button1": lazy.spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))}
     )
