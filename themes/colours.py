@@ -79,7 +79,7 @@ mob = {
     },
     "layout": {
         "border_focus": "#74DEED",
-        "border_normal": "#bf4342"
+        "border_normal": "#212529"
     },
     "power_button": "#f48498",
 }

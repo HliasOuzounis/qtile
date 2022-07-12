@@ -1,4 +1,4 @@
-from libqtile import widget
+from libqtile import widget, bar
 
 from themes.colours import colours
 from themes.fonts import font
@@ -32,8 +32,8 @@ def sep(padding):
         background=bg
     )
 
-def spacer():
-    return widget.Spacer()
+def spacer(length):
+    return widget.Spacer(length)
 
 def in_line_sep(padding, new_bg):
     return widget.Sep(
@@ -52,9 +52,9 @@ def right_side_padding(padding):
         right_pad(),
         sep(padding)
     ]
-def full_padding(padding):
+def full_padding(length = bar.STRETCH):
     return [
         right_pad(),
-        spacer(),
+        spacer(length),
         left_pad()
     ]
